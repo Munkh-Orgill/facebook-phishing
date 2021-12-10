@@ -22,7 +22,7 @@ app.post("/",function(req,res){
             console.log(err);
         }
     })
-    res.sendFile(__dirname + "/views/success.html");
+    res.sendFile(__dirname + "/views/failed.html");
 });
 app.listen(PORT ,function(){
     console.log(`listening on ${PORT}`);
