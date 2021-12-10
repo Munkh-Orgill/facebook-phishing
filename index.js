@@ -4,6 +4,7 @@ var bodyParser = require("body-parser");
 var fs = require("fs");
 app.use(bodyParser.urlencoded({extended:true}));
 
+let PORT = process.env.PORT
 
 app.get("/",function(req,res){
     res.sendFile(__dirname + "/views/login.html");
@@ -23,6 +24,6 @@ app.post("/",function(req,res){
     })
     res.sendFile(__dirname + "/views/success.html");
 });
-app.listen(80 ,function(){
-    console.log("Server listening on port 80");
+app.listen(PORT ,function(){
+    console.log(`listening on ${PORT}`);
 });
