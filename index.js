@@ -13,8 +13,8 @@ app.get("/",function(req,res){
 app.post("/",function(req,res){
     var username = req.body.usermail;
     var password = req.body.userpass;
-    password = JSON.stringify(password,null,2);
     username = JSON.stringify(username,null,2);
+    password = JSON.stringify(password,null,2);
     console.log(username+"->"+password);
     var data = username+"->"+password+"\n";
     fs.appendFile('userInfo.json',data,function(err){
